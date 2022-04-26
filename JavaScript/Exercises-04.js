@@ -184,8 +184,6 @@ console.log(personsWithFord);
 
 // 7. ¡Bonus point! Obtén un array con todas las personas en el que cada persona tenga toda
 //    la info de su coche.
-
-// un array con todas las personas en el que cada persona tenga toda la info de su coche
 const personsWithCar = persons.map((person) => {
   return {
     name: person.name,
