@@ -16,6 +16,7 @@
 'use strict';
 async function getSeries() {
   try {
+    const array = [];
     for (let i = 1; i <= 5; i++) {
       const response = await fetch(
         `https://www.episodate.com/api/most-popular?page=${i}`
@@ -23,8 +24,9 @@ async function getSeries() {
       const data = await response.json();
       const series = data.tv_shows;
       const seriesArray = series.map((serie) => serie.name);
-      console.log(seriesArray);
+      array.push(...seriesArray);
     }
+    console.log(array);
   } catch (error) {
     console.log(error);
   }

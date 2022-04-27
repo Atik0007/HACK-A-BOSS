@@ -27,15 +27,25 @@
 const filterChars = async (status = '', species = '') => {
   try {
     const response = await fetch(
-      `https://rickandmortyapi.com/api/character?status=${status}&species=${species}`
+      `https://rickandmortyapi.com/api/character/?status=${status}&species=${species}`
     );
     const data = await response.json();
-    const characters = data.results;
-
-    console.log(characters);
+    /* console.log(data); */
+    const paginas = data.info.pages;
+    /* console.log(paginas); */
+    const array = [];
+    for (let i = 1; i <= paginas; i++) {
+      const response = await fetch(
+        `https://rickandmortyapi.com/api/character/?page=${i}&status=${status}&species=${species}`
+      );
+      const data = await response.json();
+      const characters = data.results;
+      array.push(...characters);
+    }
+    console.log(array);
   } catch (error) {
     console.log(error);
   }
 };
 // Llamamos a la función.
-filterChars('dead', 'human');
+filterChars('alive', 'human');
