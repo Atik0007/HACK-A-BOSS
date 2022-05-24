@@ -1,0 +1,26 @@
+{
+  "name": "mod6-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/blueoceanstart/hack-a-bos/jsb06rt/mod6-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/blueoceanstart/hack-a-bos/jsb06rt/mod6-node/issues"
+  },
+  "homepage": "https://gitlab.com/blueoceanstart/hack-a-bos/jsb06rt/mod6-node#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "prettier": "^2.6.2",
+    "nodemon": "^2.0.16"
+  }
+}

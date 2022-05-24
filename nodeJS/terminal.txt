@@ -1,0 +1,2 @@
+// kill the port 
+sudo fuser -k 4000/tcp  
