@@ -18,9 +18,9 @@ const server = http.createServer();
 server.on('request', async (req, res) => {
   if (req.method === 'POST' && req.url === '/data') {
     const body = await bodyParser(req);
-    console.log(body);
-    res.statusCode = 200;
 
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(body));
   } else {
     res.statusCode = 404;
