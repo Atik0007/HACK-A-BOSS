@@ -24,9 +24,13 @@ const isAdmin = require('./middlewares/isAdmin');
  * ## Endpoints User ##
  * ####################
  */
-const { loginUser } = require('./controllers/users');
+const { loginUser, newUser, deleteUser } = require('./controllers/users');
 
 app.post('/login', loginUser);
+
+app.post('/user/register', authUser, isAdmin, newUser);
+
+app.delete('/user/:idUser', authUser, isAdmin, deleteUser);
 
 /**
  * #####################
@@ -38,6 +42,18 @@ const { newDrink, deleteDrink } = require('./controllers/drinks');
 app.post('/drinks', authUser, isAdmin, newDrink);
 
 app.delete('/drinks/:idDrink', authUser, isAdmin, deleteDrink);
+
+/**
+ * #####################
+ * ## Endpoints Table ##
+ * #####################
+ */
+
+const { newTable, deleteTable } = require('./controllers/tables');
+
+app.post('/table', authUser, isAdmin, newTable);
+
+app.delete('/table/:idTable', authUser, isAdmin, deleteTable);
 
 //Middleware Error
 app.use((err, req, res, next) => {
