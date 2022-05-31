@@ -3,14 +3,16 @@ const { generateError } = require('../helper.js');
 
 const getUser = async (req, res, next) => {
     try {
-        const { idUser } = req.params;
+        console.log('req.params.idUser', req.params);
+        const { id } = req.params;
+        console.log('id', id);
 
         /* Checking if the id is missing. If it is missing, it will throw an error. */
-        if (!idUser) {
+        if (!id) {
             throw generateError(400, 'Missing parameters');
         }
 
-        const user = await selectUserById(idUser);
+        const user = await selectUserById(id);
 
         res.send({
             status: 'success',

@@ -18,7 +18,7 @@ const loginUser = require('./controllers/loginUser');
 //Register a new user
 app.post('/users', newUser);
 //Information about a user
-app.get('/users/:idUser', getUser);
+app.get('/users', getUser);
 //Information about a user tokken
 
 //Login a user

@@ -2,7 +2,7 @@ const getConnection = require('../getConnection');
 
 const { generateError } = require('../../helper');
 
-const selectUserById = async (idUser) => {
+const selectUserById = async (id) => {
     let connection;
     try {
         // Getting a connection from the pool.
@@ -10,8 +10,9 @@ const selectUserById = async (idUser) => {
 
         const [users] = await connection.query(
             `SELECT id, email, password FROM users WHERE id = ?`,
-            [idUser]
+            [id]
         );
+        console.log('users', users);
         // Checking if the user exists.
         if (users.length < 1) {
             throw generateError(404, 'User not found');
