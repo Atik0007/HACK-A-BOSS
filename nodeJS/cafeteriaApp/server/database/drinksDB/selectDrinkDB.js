@@ -1,11 +1,14 @@
 const getConnection = require('../getConnection');
 
-const createTable = async () => {
+const selectDrinkDB = async () => {
     let connection;
+
     try {
         connection = await getConnection();
 
-        await connection.query('INSERT INTO tables () VALUES ()');
+        const [drinks] = await connection.query('SELECT * FROM drinks');
+
+        return drinks;
     } finally {
         if (connection) {
             connection.release();
@@ -13,4 +16,4 @@ const createTable = async () => {
     }
 };
 
-module.exports = createTable;
+module.exports = selectDrinkDB;

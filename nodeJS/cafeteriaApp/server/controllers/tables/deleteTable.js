@@ -12,7 +12,7 @@ const deleteTable = async (req, res, next) => {
 
         res.send({
             status: 'ok',
-            message: 'Drink deleted',
+            message: 'Table deleted',
         });
     } catch (err) {
         next(err);

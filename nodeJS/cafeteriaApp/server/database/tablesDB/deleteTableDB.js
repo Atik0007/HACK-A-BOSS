@@ -8,7 +8,7 @@ const deleteTableDB = async (idTable) => {
         connection = await getConnection();
 
         const [table] = await connection.query(
-            'SELECT id FROM tables WHERE id = ?',
+            'SELECT * FROM tables WHERE id = ?',
             [idTable]
         );
 

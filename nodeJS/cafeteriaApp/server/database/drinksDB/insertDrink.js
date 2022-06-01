@@ -13,7 +13,7 @@ const insertDrink = async (name) => {
         );
 
         if (drink.length > 0) {
-            throw generateError(400, 'Drink already exists');
+            throw generateError(403, 'Drink already exists');
         }
 
         await connection.query('INSERT INTO drinks (name) VALUES (?)', [name]);
