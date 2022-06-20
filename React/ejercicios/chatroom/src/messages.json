@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "author": 456317,
+        "body": "Mensaje 0 con un texto algo largo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "date": "2019-03-26T18:33:00"
+    },
+    {
+        "id": 2,
+        "author": 456317,
+        "body": "Mensaje 1 de texto suficientemente largo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "date": "2019-03-26T18:33:02"
+    },
+    {
+        "id": 3,
+        "author": 456326,
+        "body": "Yo... no soy tu padre",
+        "date": "2019-03-27T09:33:41.579Z"
+    }
+]

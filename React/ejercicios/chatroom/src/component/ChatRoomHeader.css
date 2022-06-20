@@ -1,0 +1,8 @@
+.ChatRoomHeader{
+    width: 100%;
+    background-color: rgb(17, 226, 245);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+   
+}

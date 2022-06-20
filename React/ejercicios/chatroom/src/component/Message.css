@@ -1,0 +1,52 @@
+.Message{
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: bisque;
+    flex-direction: column;
+}
+.Message ul{
+    gap: 1rem;
+
+}
+
+.Message ul li{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+.MessageBody{
+    background-color: lightgreen;
+    flex-grow: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ .avatar{
+    width: 200px;
+}
+
+.MessageInfo{
+    display: flex;
+    justify-content: flex-end;
+    color: blueviolet;
+}
+form{
+    display: flex;
+    justify-content: center;
+    
+}
+
+input{
+    width: 90%;
+    height: 2rem;
+    padding: .5rem;
+}
+button{
+    width: 10%;
+    height: 2rem;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+}

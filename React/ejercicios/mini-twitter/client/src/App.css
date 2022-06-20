@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --blue-color: #1da1f2;
+}
+
+body > div > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.userInfo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+.userInfo p{
+    margin: 0;
+}
+
+body > div > header button {
+    padding: 0.4rem 0.2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 400px;
+}
+
+main > form > label {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+
+
+main > form > button {
+    margin-top: 1rem;
+}
+
+main > p {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+main > p.error {
+    color: red;
+}
+
+main > ul {
+    max-width: 800px;
+    list-style: none;
+    margin-bottom: 6rem;
+}
+
+main > ul > li {
+    margin: 2rem 0;
+    border: 1px dashed black;
+    box-shadow: 5px 5px 5px solid;
+}
+
+main > ul > li > header {
+    padding: 1rem;
+    background-color: var(--blue-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+main > ul > li > div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+main > ul > li > div > img {
+    width: 50%;
+    align-self: center;
+    padding: 1rem 0;
+}
+
+main > ul > li > div > p {
+    margin: 1rem;
+}
+
+div.modalBg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.modalBg > div {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.loginBt{
+    width: 100%;
+}
+
+
+.error{
+    margin-top: 1rem;
+}
+
+body > div > footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    background-color: var(--blue-color);
+}

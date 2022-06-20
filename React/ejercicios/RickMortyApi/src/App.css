@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: bisque;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 400px;
+}
+
+main > form > label {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+main > form > input,
+main > form > select,
+main > form > button {
+    height: 30px;
+    padding: 0.2rem;
+}
+
+main > form > button {
+    margin-top: 2rem;
+}
+
+main > p {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+main > p.error {
+    color: red;
+}
+
+main > p.data {
+    color: green;
+}
+
+main > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1rem;
+    max-width: 400px;
+    margin-bottom: 6rem;
+}
+
+main > ul > li {
+    width: 30%;
+}
+
+main > ul > li > img {
+    width: 100%;
+}
+
+main > ul > li > p {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: bisque;
+}
+.NP{
+    padding: 1rem;
+    margin-bottom: 6rem;
+}
+.pp{
+    padding: 1rem;
+    margin-bottom: 6rem;
+}
